@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>12.0</LangVersion>
+
+    <AssemblyName>TransferDood</AssemblyName>
+    <RootNamespace>TransferDood</RootNamespace>
+    <Version>0.1.0</Version>
+    <Product>TransferDood</Product>
+    <Company>KyaaaDood</Company>
+    <ApplicationIcon>Assets\app.ico</ApplicationIcon>
+
+    <!-- Permite compilar también desde Linux/macOS (solo para verificar) -->
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+
+    <!-- Ajustes pensados para gastar la menor RAM posible -->
+    <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+    <ServerGarbageCollector>false</ServerGarbageCollector>
+    <TieredPGO>false</TieredPGO>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="Assets\app.ico" />
+  </ItemGroup>
+
+</Project>
