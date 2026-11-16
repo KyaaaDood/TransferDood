@@ -4,132 +4,126 @@
 
 # TransferDood
 
-**Envía archivos, carpetas, textos y el portapapeles entre Windows y Android por tu red local.**
-Rápido, ligero y cifrado. Sin cuentas, sin servidores, sin telemetría.
+**Send files, folders, text and the clipboard between Windows and Android over your local network.**
+Fast, lightweight and encrypted. No accounts, no servers, no telemetry.
 
-[![Licencia: MIT](https://img.shields.io/badge/licencia-MIT-blue.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![Windows 10/11](https://img.shields.io/badge/Windows-10%20%2F%2011-0078D4?logo=windows&logoColor=white)
 ![Android 7+](https://img.shields.io/badge/Android-7.0%2B-3DDC84?logo=android&logoColor=white)
-[![Versión 0.1.0](https://img.shields.io/badge/versi%C3%B3n-0.1.0-informational)](CHANGELOG.md)
-![Cifrado AES-256-GCM](https://img.shields.io/badge/cifrado-AES--256--GCM-success)
+[![Version 0.1.0](https://img.shields.io/badge/version-0.1.0-informational)](CHANGELOG.md)
+![AES-256-GCM encryption](https://img.shields.io/badge/encryption-AES--256--GCM-success)
 [![Patreon](https://img.shields.io/badge/Patreon-KyaaaDood-F96854?logo=patreon&logoColor=white)](https://www.patreon.com/cw/KyaaaDood)
 
-[Descargar](../../releases) · [Compilar](#-compilar) · [Seguridad](SECURITY.md) · [English](#-english)
+[English](README.md) · [Español](README.es.md)
+
+[Download](../../releases) · [Build](#-build) · [Security](SECURITY.md) · [Changelog](CHANGELOG.md)
 
 </div>
 
 ---
 
-## ✨ Características
+## ✨ Features
 
 | | |
 |---|---|
-| 📡 **Detección automática** | Encuentra los equipos de tu red y, si el descubrimiento no funciona, conecta **por IP**. |
-| 📁 **Archivos y carpetas** | Con progreso, velocidad, pausa/reanudar y cancelar. |
-| 📝 **Texto y portapapeles** | Mándalo de un equipo a otro y pégalo directo. |
-| 🔒 **Cifrado AES‑256‑GCM** | Todo viaja cifrado, usando la aceleración por hardware del procesador (no frena la transferencia). |
-| ⭐ **Favoritos** | Se emparejan con un código de 6 dígitos; reciben sin preguntar y el canal queda autenticado. |
-| 🌙 **No molestar** | Pausa la recepción por 30 min, 1–2 h o hasta que lo desactives, o silénciala sola en pantalla completa (juegos). |
-| 👀 **Vista previa y compartir** | Mira imágenes, audio y texto sin salir de la app (en Android también PDF y video); comparte o copia el archivo recibido. |
-| 🪶 **Ligera** | Poca RAM y batería: el descubrimiento baja su ritmo cuando la app no está a la vista. |
-| 🌐 **Español / English** | Automático según el idioma del dispositivo, o a elegir. |
-| 🎨 **Tema claro / oscuro** | Sigue al sistema o lo eliges tú. |
+| 📡 **Automatic discovery** | Finds the devices on your network and, if discovery doesn't work, connects **by IP**. |
+| 📁 **Files and folders** | Progress, speed, pause/resume and cancel. |
+| 📝 **Text and clipboard** | Send it from one device to another and paste it right away. |
+| 🔒 **AES-256-GCM encryption** | Everything is encrypted in transit, using the CPU's hardware acceleration (it doesn't slow transfers down). |
+| ⭐ **Favorites** | Pair devices with a 6-digit code; favorites receive without asking and the channel is authenticated. |
+| 🌙 **Do not disturb** | Pause receiving for 30 min, 1–2 h or until you turn it off, or mute it automatically in full screen (games). |
+| 👀 **Preview and share** | View images, audio and text without leaving the app (PDF and video too on Android); share or copy the received file. |
+| 🪶 **Lightweight** | Low RAM and battery use: discovery slows down when the app isn't in view. |
+| 🌐 **English / Español** | Automatic (follows the device language) or your choice. |
+| 🎨 **Light / dark theme** | Follows the system or your choice. |
 
-**Windows:** icono en la bandeja, menú contextual «Enviar con TransferDood» en el Explorador, inicio con Windows y regla de
-firewall automática (solo la subred local).
-**Android:** servicio ligero en segundo plano, avisos flotantes para aceptar, abrir la carpeta de recibidos e instalar APK recibidos.
+**Windows:** tray icon, "Send with TransferDood" Explorer context menu, start with Windows and an automatic firewall
+rule (local subnet only).
+**Android:** lightweight background service, heads-up notifications to accept, open the received-files folder and install received APKs.
 
-> **Versión 0.1.0** — primera versión pública. Funciona y se usa a diario, pero todavía es joven: si algo falla,
-> abre un *issue*. Mira [CHANGELOG.md](CHANGELOG.md) para ver qué incluye.
+> **Version 0.1.0** — first public release. It works and is used daily, but it's still young: if something breaks,
+> please open an issue. See [CHANGELOG.md](CHANGELOG.md) for what's included.
 
-## 📦 Requisitos
+## 📦 Requirements
 
-| Plataforma | Versión |
+| Platform | Version |
 |---|---|
-| Windows | 10 / 11 de 64 bits. La versión *ligera* necesita el **.NET 8 Desktop Runtime**; la *standalone* no necesita nada. |
-| Android | 7.0 (API 24) o más nuevo, con pantalla táctil. No está pensada para Android TV / Google TV. |
+| Windows | 10 / 11, 64-bit. The *light* build needs the **.NET 8 Desktop Runtime**; the *standalone* build needs nothing. |
+| Android | 7.0 (API 24) or newer, with a touch screen. Not designed for Android TV / Google TV (it installs, but the UI is touch-first). |
 
-## ⬇️ Descargar
+## ⬇️ Download
 
-En [**Releases**](../../releases):
+From [**Releases**](../../releases):
 
-- `TransferDood-win-x64.exe` — ligera (requiere .NET 8 Desktop Runtime)
-- `TransferDood-win-x64-standalone.exe` — autónoma, pesa más
+- `TransferDood-win-x64.exe` — light (requires the .NET 8 Desktop Runtime)
+- `TransferDood-win-x64-standalone.exe` — standalone, larger
 - `TransferDood-android.apk`
-- `SHA256SUMS.txt` — para verificar las descargas
+- `SHA256SUMS.txt` — to verify the downloads
 
-> El `.exe` no está firmado digitalmente, así que Windows SmartScreen puede mostrar un aviso la primera vez
-> («Más información» → «Ejecutar de todas formas»). El código está aquí para que lo revises.
+> The `.exe` is not digitally signed, so Windows SmartScreen may show a warning the first time
+> ("More info" → "Run anyway"). The source code is right here for you to review.
 
-## 🚀 Uso rápido
+## 🚀 Quick start
 
-1. Instala TransferDood en los dos equipos y conéctalos a la **misma red**.
-2. Abre la app: verás al otro equipo en la lista. Arrastra archivos sobre él (Windows) o toca el equipo (Android).
-3. El otro equipo acepta. Para no tener que aceptar cada vez, toca la ⭐ y empareja con el código de 6 dígitos.
+1. Install TransferDood on both devices and connect them to the **same network**.
+2. Open the app: you'll see the other device in the list. Drag files onto it (Windows) or tap the device (Android).
+3. The other device accepts. To skip the prompt every time, tap the ⭐ and pair with the 6-digit code.
 
-**¿No aparece el otro equipo?** Usa **Por IP** y escribe su dirección. Revisa que ambos estén en la misma red (algunas
-redes de invitados o de oficina aíslan los equipos entre sí).
+**Can't see the other device?** Use **By IP** and type its address. Make sure both are on the same network (some guest
+or office networks isolate devices from each other).
 
-## 🔨 Compilar
+## 🔨 Build
 
-- **Windows:** instala el SDK de .NET 8 y ejecuta `windows\build.bat` (ligera) o `windows\build.bat full` (standalone).
-- **Android:** abre `android/` con Android Studio (JDK 17+) o ejecuta `android\build.bat` / `./gradlew assembleRelease`.
-- **GitHub Actions:** al subir una etiqueta `v*` se compilan ambos y se crea un *release*. Para firmar el APK con tu llave
-  define los secretos `TD_KEYSTORE_BASE64`, `TD_KEYSTORE_PASSWORD`, `TD_KEY_ALIAS` y `TD_KEY_PASSWORD`.
+- **Windows:** install the .NET 8 SDK and run `windows\build.bat` (light) or `windows\build.bat full` (standalone).
+- **Android:** open `android/` with Android Studio, or run `android\build.bat` / `./gradlew assembleRelease`.
+  Gradle 8.9 needs **JDK 17–21** (it does not work with Java 25 or Java 8).
+- **GitHub Actions:** pushing a `v*` tag builds both and creates a release. To sign the APK with your own key, set the
+  secrets `TD_KEYSTORE_BASE64`, `TD_KEYSTORE_PASSWORD`, `TD_KEY_ALIAS` and `TD_KEY_PASSWORD`.
 
 ```text
-windows/   C# .NET 8 (WinForms), sin dependencias externas
-android/   Kotlin nativo, sin librerías externas
+windows/   C# .NET 8 (WinForms), no external dependencies
+android/   Native Kotlin, no external libraries
 ```
 
-## 🔐 Seguridad
+## 🔐 Security
 
-Está hecha **solo para redes de confianza** (tu casa, tu oficina). Todo va cifrado y siempre se pregunta antes de aceptar
-algo de un equipo que no es favorito. Modelo completo, límites y cómo reportar una vulnerabilidad: [SECURITY.md](SECURITY.md).
-El protocolo está documentado en [`windows/PROTOCOL.md`](windows/PROTOCOL.md).
+TransferDood is built **for trusted local networks only** (your home, your office). Everything is encrypted, and you are
+always asked before accepting anything from a device that isn't a favorite. Full model, limits and how to report a
+vulnerability: [SECURITY.md](SECURITY.md). The protocol is documented in [`windows/PROTOCOL.md`](windows/PROTOCOL.md).
 
-## 💬 Preguntas frecuentes
+## 💬 FAQ
 
 <details>
-<summary>¿Funciona fuera de mi red local, por internet?</summary>
+<summary>Does it work outside my local network, over the internet?</summary>
 
-No. TransferDood solo trabaja dentro de la misma red local; no usa servidores intermedios.
+No. TransferDood only works inside the same local network; it uses no intermediary servers.
 </details>
 
 <details>
-<summary>¿Por qué Windows me pide permisos de administrador al inicio?</summary>
+<summary>Why does Windows ask for administrator permission at first launch?</summary>
 
-Una sola vez, para crear la regla del firewall que deja entrar conexiones desde tu subred local al puerto 47615.
+Once, to create the firewall rule that lets connections from your local subnet reach port 47615.
 </details>
 
 <details>
-<summary>No me llegan los avisos flotantes en Android</summary>
+<summary>I don't get heads-up notifications on Android</summary>
 
-Abre los ajustes de notificaciones de la app y activa «Mostrar como aviso emergente / flotante» para el canal
-*Archivos entrantes*. Algunas marcas (Xiaomi, Huawei, Samsung) lo desactivan por defecto en apps instaladas a mano.
+Open the app's notification settings and enable "Pop on screen" / "Floating" for the *Incoming files* channel.
+Some brands (Xiaomi, Huawei, Samsung) turn it off by default for sideloaded apps.
 </details>
 
-## ❤️ Créditos
+<details>
+<summary>I installed two copies on my phone</summary>
 
-Hecho por **KyaaaDood** con Claude AI.
+Don't run two copies: they use the same port and get in each other's way. Uninstall both and install just one.
+</details>
 
-Si TransferDood te sirve, puedes apoyar el desarrollo en [**Patreon**](https://www.patreon.com/cw/KyaaaDood). ¡Gracias!
+## ❤️ Credits
 
-## 📄 Licencia
+Made by **KyaaaDood** with Claude AI.
+
+If TransferDood is useful to you, you can support its development on [**Patreon**](https://www.patreon.com/cw/KyaaaDood). Thank you!
+
+## 📄 License
 
 [MIT](LICENSE) © 2026 KyaaaDood
-
----
-
-## 🇬🇧 English
-
-**TransferDood** sends files, folders, text and clipboard between **Windows** and **Android** over your **local network**
-— fast, light and encrypted (AES‑256‑GCM). No accounts, no servers, no telemetry.
-
-- Automatic device discovery (or connect by IP), pause/resume, favorites paired with a 6‑digit code.
-- Do‑not‑disturb mode, in‑app preview (images, audio, text; PDF and video on Android), share/copy received files.
-- English and Spanish UI (automatic or manual), light/dark theme.
-- Windows 10/11 x64 and Android 7.0+. Local network only. See [SECURITY.md](SECURITY.md) for the security model.
-
-Download from [Releases](../../releases), or build it: `windows\build.bat` (needs the .NET 8 SDK) and `android/`
-(Android Studio, JDK 17+). Made by **KyaaaDood** with Claude AI · [Patreon](https://www.patreon.com/cw/KyaaaDood) · [MIT](LICENSE).
